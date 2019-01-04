@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<groups><run><include name="Functional"></include></run></groups>
+  <test thread-count="5" name="Test" parallel="true">
+
+
+    <classes>
+      <class name="pom.testcases.TC_002"/>
+      <class name="pom.testcases.TC_001"/>
+      <class name="pom.testcases.TC_004"/>
+      <class name="pom.testcases.TC_003"/>
+      <class name="pom.testcases.TC_005"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
