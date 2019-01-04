@@ -11,6 +11,7 @@ import wrappers.ProjectWrappers;
 public class TC_001 extends ProjectWrappers{
 	
 	@BeforeClass(groups = "Smoke")
+	
 		public void setValues(){
 			browserName="Chrome";
 			testCaseName = "TC001";

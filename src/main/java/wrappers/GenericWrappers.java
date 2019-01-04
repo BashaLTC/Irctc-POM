@@ -1,7 +1,6 @@
 package wrappers;
 
 import java.awt.AWTException;
-import java.awt.HeadlessException;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
@@ -37,7 +36,6 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 import utils.Reporter;
 
-
 public class GenericWrappers extends Reporter implements Wrappers{
 
 	public RemoteWebDriver driver;
@@ -45,6 +43,7 @@ public class GenericWrappers extends Reporter implements Wrappers{
 
 	protected static Properties objprop;
 	public String sUrl,primaryWindowHandle,sHubUrl,sHubPort;
+	
 	
 	
 	public GenericWrappers() {

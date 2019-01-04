@@ -11,6 +11,7 @@ public abstract class Reporter {
 	public static ExtentReports report;
 	public String testCaseName,testCaseDescription,author,category;
 	
+	
 	public void reportStep(String desc, String status){
 		
 		long snapNumber = 100000l;

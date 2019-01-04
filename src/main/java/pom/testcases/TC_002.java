@@ -7,6 +7,7 @@ import pom.pages.HomePage;
 import wrappers.ProjectWrappers;
 
 public class TC_002 extends ProjectWrappers{
+	
 	@BeforeClass(groups = "Regression")
 	public void setValues(){
 		browserName="Chrome";
@@ -15,7 +16,10 @@ public class TC_002 extends ProjectWrappers{
 		author = "Sabari";
 		category = "smoke";
 	}
-	@Test(groups = "Regression")
+	
+	
+	
+	@Test
 	public void bookHotel(){
 		new HomePage(driver, test)
 		.mouseHoverOnTourism()

@@ -14,35 +14,36 @@ public class ProjectWrappers extends GenericWrappers{
 
 	public String browserName;
 	
-	@BeforeMethod(groups={"Smoke","Functional","Regression"})
+	@BeforeMethod
 	public void beforeMethod(){
 		startTest(testCaseName, testCaseDescription);
 		test.assignAuthor(author);
 		test.assignCategory(category);
 		invokeApp(browserName);
 	}
-	@AfterMethod(groups={"Smoke","Functional","Regression"})
+	@AfterMethod
 	public void closeBrowsers(){
 		closeAllBrowsersNoSnap();
 	}
-	@BeforeSuite(groups={"Smoke","Functional","Regression"})
+	@BeforeSuite
 	public void beforeSuite(){
 		startReport();
+		
 	}
-	@AfterSuite(groups={"Smoke","Functional","Regression"})
+	@AfterSuite
 		public void afterSuite(){
 		endReport();
 	}
-	@AfterClass(groups={"Smoke","Functional","Regression"})
+	@AfterClass
 		public void afterClass(){
 		endTest();
 	}
-	@BeforeTest(groups={"Smoke","Functional","Regression"})
+	@BeforeTest
 		public void beforeTest(){
 		loadObjects();
 		
 	}
-	@AfterTest(groups={"Smoke","Functional","Regression"})
+	@AfterTest
 		public void afterTest(){
 		unloadObjects();
 	}

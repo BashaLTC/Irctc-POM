@@ -7,7 +7,8 @@ import pom.pages.HomePage;
 import wrappers.ProjectWrappers;
 
 public class TC_003 extends ProjectWrappers{
-	@BeforeClass(groups = "Regression")
+	
+	/*@BeforeClass(groups = "Regression")
 	public void setValues(){
 		browserName="Chrome";
 		testCaseName = "TC001";
@@ -15,6 +16,7 @@ public class TC_003 extends ProjectWrappers{
 		author = "Sabari";
 		category = "smoke";
 	}
+	*/
 	@Test(groups = "Regression")
 	public void nvspRegistration (){
 		new HomePage(driver,test)
