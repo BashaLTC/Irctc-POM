@@ -22,6 +22,8 @@ public class TC_001 extends ProjectWrappers{
 	}
 	
 	@Test(groups = "Smoke")
+	
+	
 	public void IRCTCSignup(){
 		new HomePage(driver, test)
 		.clickOnSignup()
@@ -35,7 +37,7 @@ public class TC_001 extends ProjectWrappers{
 		.enterMiddleName("Gudla")
 		.enterLastName("Sabari")
 		.chooseGenderMale()
-		.selectMartialStatus()
+		.selectMartialStatus()   
 		.selectDobDay("05")
 		.selectDobMonth(1)
 		.selectDobYear("1997")
