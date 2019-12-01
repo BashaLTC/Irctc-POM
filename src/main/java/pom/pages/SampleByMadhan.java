@@ -1,1 +1,5 @@
-public void SampleByMadhan
+package pom.pages;
+public class SampleByMadhan
+{
+	
+}
