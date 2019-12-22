@@ -27,7 +27,7 @@ public class TC_001 extends ProjectWrappers{
 	public void IRCTCSignup(){
 		new HomePage(driver, test)
 		.clickOnSignup()
-		.enterUsername("girish")
+		.enterUsername("Tester")
 		.enterPassword("testA222")
 		.confirmPassword("testA222")
 		.selectSecurityQuestion("0")
