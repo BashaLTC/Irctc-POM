@@ -11,6 +11,9 @@ public class CabBookingPage extends GenericWrappers {
 	
 	public CabBookingPage(RemoteWebDriver driver, ExtentTest test){
 			this.driver = driver;
+			
+			int a=10;
+			
 			this.test = test;
 	}
 	
