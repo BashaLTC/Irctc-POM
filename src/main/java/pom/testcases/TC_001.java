@@ -23,6 +23,7 @@ public class TC_001 extends ProjectWrappers{
 	
 	@Test(groups = "Smoke")
 	
+//	to test irctc sign up test flow
 	
 	public void IRCTCSignup(){
 		new HomePage(driver, test)
