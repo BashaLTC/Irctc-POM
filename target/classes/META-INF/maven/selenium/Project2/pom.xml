@@ -12,7 +12,86 @@
 
 <profiles>
 
+<profile>
+            <id>loginonly1</id>
+            <properties>
+                <suite.name>CoreSiteSuiteFiles/Login.xml</suite.name>
+            </properties>
+            <activation/>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <version>1.6.0</version>
+                        <executions>
+                            <execution>
+                                <id>start-sauceconnect</id>
+                                <phase>test-compile</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>src/test/resources/sauceconnect/sc.sh</executable>
+                                    <arguments/>
 
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <version>1.8</version>
+                        <executions>
+                            <execution>
+                                <id>sleep-for-a-while</id>
+                                <phase>test</phase>
+                                <configuration>
+                                    <target>
+                                        <sleep seconds="15"/>
+                                    </target>
+                                </configuration>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.20</version>
+                        <configuration>
+                            <argLine>
+                                -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
+                            </argLine>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>resources/${suite.name}</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.aspectj</groupId>
+                                <artifactId>aspectjweaver</artifactId>
+                                <version>${aspectj.version}</version>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+
+ <profile>
+    <id>Irctc-Pom-L1</id>
+    <activation>
+        <activeByDefault>false</activeByDefault>
+    </activation>
+    <properties>
+        <suite.name>chrome/testng.xml</suite.name>
+    </properties>
+</profile>
+     
 	<profile>
 		<id>testing</id>	
 		<activation>
@@ -35,11 +114,7 @@
 			<artifactId>selenium-java</artifactId>
 			<version>3.3.1</version>
 		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
-		</dependency>
+		
 
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -61,6 +136,12 @@
 			<artifactId>commons-io</artifactId>
 			<version>1.3.2</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+		    <groupId>org.testng</groupId>
+		    <artifactId>testng</artifactId>
+		    <version>6.14.3</version>
+		    <scope>test</scope>
+		</dependency>		
 	</dependencies>
-
 </project>
