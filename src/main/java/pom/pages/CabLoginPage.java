@@ -15,6 +15,9 @@ public class CabLoginPage extends GenericWrappers{
 		}
 		
 	public CabLoginPage verifyTextFromLoginPage(String text){
+
+		//Sysout("ABCD");
+
 		verifyTextByXpath(objprop.getProperty("CabPage.Cab.verifyTextFromLoginPage"), text);
 		return this;
 	}

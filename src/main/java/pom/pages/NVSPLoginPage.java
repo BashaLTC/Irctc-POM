@@ -18,6 +18,7 @@ public class NVSPLoginPage extends ProjectWrappers{
 		return this;
 	}
 	public NVSPRegistrationPage clickToApplyNVSP(){
+		clickByLink(objprop.getProperty("NVSPPage.NVSP.clickToApplyNVSP"));		
 		clickByLink(objprop.getProperty("NVSPPage.NVSP.clickToApplyNVSP"));
 		return new NVSPRegistrationPage(driver, test);
 	}
