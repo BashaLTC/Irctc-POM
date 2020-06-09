@@ -34,7 +34,8 @@ public class TC_002 extends ProjectWrappers{
 		.selectCheckOutTime("11")
 		.selectNoOfPersons("4")
 		.checkAvaiability()
-		.verifyTheText("Insufficient Availability... For The Given CheckInTime/CheckOutTime");		
+		.verifyTheText("Insufficient Availability... For The Given CheckInTime/CheckOutTime");
+	//my changes		
 	}
 
 }
